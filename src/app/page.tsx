@@ -10,7 +10,7 @@ const TerritoryMap = dynamic(() => import("@/components/Territorymap"), {
 export default function Home() {
   return (
     <div style={{ height: "100vh" }}>
-      <TerritoryMap />
+
     </div>
   );
 }
