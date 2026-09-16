@@ -1,4 +1,4 @@
-const dns = require("node:dns");
+import dns from "node:dns";
 dns.setServers(["1.1.1.1", "8.8.8.8"]);
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
