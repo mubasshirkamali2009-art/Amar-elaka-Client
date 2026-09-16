@@ -1,6 +1,7 @@
-import { createAuthClient } from "better-auth/react"
-export const authClient = createAuthClient({
-    /** The base URL of the server (optional if you're using the same domain) */
-    baseURL: "http://localhost:3000"
+import { createAuthClient } from "better-auth/react";
 
-})
+export const authClient = createAuthClient({
+    // Same domain as the frontend now, since auth runs inside Next.js.
+    // Can even be omitted entirely if it's the same origin.
+    baseURL: "http://localhost:3000",
+});
