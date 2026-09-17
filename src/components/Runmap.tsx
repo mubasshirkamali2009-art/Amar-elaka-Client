@@ -41,7 +41,7 @@ interface RunResult {
 }
 
 const COLORS = ['#FF6B35', '#00D9FF', '#A855F7', '#FFC107', '#F43F5E'];
-const API_BASE = 'http://localhost:4001';
+const API_BASE = process.env.NEXT_PUBLIC_BASE_URL;
 const DHAKA_FALLBACK: [number, number] = [23.8103, 90.4125];
 const DEFAULT_RADIUS_KM = 5;
 

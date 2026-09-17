@@ -18,7 +18,7 @@ interface Territory {
 }
 
 const COLORS = ['#FF6B35', '#00D9FF', '#A855F7', '#FFC107', '#F43F5E'];
-const API_BASE = 'http://localhost:4001';
+const API_BASE = process.env.NEXT_PUBLIC_BASE_URL;
 const DHAKA_FALLBACK: [number, number] = [23.8103, 90.4125];
 const DEFAULT_RADIUS_KM = 5;
 
@@ -182,8 +182,8 @@ export default function TerritoryMap() {
                         key={m}
                         onClick={() => { setBrowseMode(m); setSelectedRegion(''); }}
                         className={`px-4 py-2 rounded-full text-sm border transition-colors ${browseMode === m
-                                ? 'bg-orange-500 text-slate-900 border-orange-500 font-bold'
-                                : 'bg-transparent text-slate-400 border-slate-700'
+                            ? 'bg-orange-500 text-slate-900 border-orange-500 font-bold'
+                            : 'bg-transparent text-slate-400 border-slate-700'
                             }`}
                     >
                         {m === 'nearby' && 'Around Me'}

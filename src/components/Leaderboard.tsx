@@ -10,7 +10,7 @@ interface LeaderboardEntry {
     territoryCount: number;
 }
 
-const API_BASE = 'http://localhost:4001';
+const API_BASE = process.env.NEXT_PUBLIC_BASE_URL;
 type Scope = 'all' | 'division' | 'district' | 'nearby';
 
 const COLORS = ['#FF6B35', '#00D9FF', '#A855F7', '#FFC107', '#F43F5E'];
